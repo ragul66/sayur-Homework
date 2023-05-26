@@ -3,44 +3,14 @@ stock in the evening, sales amount at the end of the day and profit for each ite
 if the supply reaches 20% of the stock. Print the 3 items with highest sales, and top 3 highest profit use Dictionary.'''
 
 
-cafe={
-    'tea':{
-    'name':'tea',
-    'price':30,
-    'stock':25,
-    'refill':25,
-    'profit':10,
-    'sales':0,
-    'totalprofit':0
-    },
-    'coffee':{
-    'name':'coffee',
-    'price':25,
-    'stock':20,
-    'refill':20,
-    'profit':8,
-    'sales':0,
-    'totalprofit':0
-    },
-    'cookie':{
-    'name':'cookies',
-    'price':15,
-    'stock':35,
-    'refill':35,
-    'profit':7,
-    'sales':0,
-    'totalprofit':0
-    },
-    'cappucino':{
-    'name':'cappucino',
-    'price':23,
-    'stock':19,
-    'refill':19,
-    'profit':6,
-    'sales':0,
-    'totalprofit':0
-}
-}
+import mysql.connector
+mydb=mysql.connector.connect(
+    host='localhost',
+    username='root',
+    password='Ragul.123',
+    database='cafe'
+)
+
 #custinput='2 coffee 3 tea'
 for i in range(3):
     custinput=input("What do you want").lower()
